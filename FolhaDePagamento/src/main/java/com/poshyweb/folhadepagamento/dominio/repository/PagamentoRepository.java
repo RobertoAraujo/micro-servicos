@@ -1,4 +1,4 @@
 package com.poshyweb.folhadepagamento.dominio.repository;
 
-public class PagamentoRepository {
+public interface PagamentoRepository {
 }
