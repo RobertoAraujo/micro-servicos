@@ -20,7 +20,11 @@ public class PagamentoController {
     @GetMapping(value = "/{workerId}/dias/{dias}")
     public ResponseEntity<Pagamento> getPagamento(@PathVariable Long workerId,
                                                   @PathVariable Integer dias){
-        Pagamento pagamento= service.getPagamento(workerId, dias);
-        return ResponseEntity.status(HttpStatus.OK).body(pagamento);
+        try {
+            Pagamento pagamento= service.getPagamento(workerId, dias);
+            return ResponseEntity.status(HttpStatus.OK).body(pagamento);
+        }catch (Exception e){
+            return ResponseEntity.notFound().build();
+        }
     }
 }
