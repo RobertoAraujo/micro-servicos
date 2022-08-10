@@ -4,6 +4,7 @@ import com.poshyweb.folhadepagamento.client.WorkerFingCleint;
 import com.poshyweb.folhadepagamento.dominio.entity.Pagamento;
 import com.poshyweb.folhadepagamento.dominio.entity.Worker;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
